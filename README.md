@@ -1,4 +1,3 @@
-# opensirf_cookbook_register
+# opensirf_register
 
-TODO: Enter the cookbook description here.
-
+This cookbook must be run against an OpenSIRF-JAXRS instance. It will register the instance with the identity service.
