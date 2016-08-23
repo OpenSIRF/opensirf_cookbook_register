@@ -4,6 +4,11 @@
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 
-# create /var/lib/sirf
-#
-# create conf.json based on template + attributes
+directory '/var/lib/sirf' do
+  action :create
+end
+
+template '/var/lib/sirf/conf.json' do
+  source 'conf.json.erb'
+end
+
