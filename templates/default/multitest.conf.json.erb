@@ -1,0 +1,22 @@
+"containerConfiguration": {
+    "containerName": "<%= node['opensirf_register']['conf']['containerName'] %>",
+    "driver": "multi",
+    "endpoint": "<%= node['opensirf_register']['conf']['endpoint'] %>",
+    "distributionPolicy": "<%= node['opensirf_register']['conf']['distributionPolicy'] %>",
+    "subconfigurations": [
+      {
+        "containerName": "lv1",
+        "driver": "fs",
+        "endpoint": "localhost",
+        "mountPoint": "/var/lib/sirf/storage/lv1"
+      },
+      {
+        "containerName": "lv2",
+        "driver": "fs",
+        "endpoint": "localhost",
+        "mountPoint": "/var/lib/sirf/storage/lv2"
+      }
+    ]
+  }
+}
+

@@ -5,4 +5,4 @@ default['opensirf_register']['conf']['region'] = 'RegionOne'
 default['opensirf_register']['conf']['containerName'] = 'philContainer'
 default['opensirf_register']['conf']['driver'] = 'swift'
 default['opensirf_register']['conf']['endpoint'] = 'http://200.144.189.109:55000/v2.0/'
-
+default['opensirf_register']['conf']['distributionPolicy'] = 'serial'
