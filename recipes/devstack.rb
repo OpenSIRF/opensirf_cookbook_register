@@ -11,7 +11,7 @@ yum_package 'java-1.8.0-openjdk-devel.x86_64'
 tomcat_install '8'
 
 remote_file '/opt/tomcat_8/webapps/opensirf-storage-monitor.war' do
-  source node['storageMonitorUrl']
+  source node['storage_monitor_url']
 end
 
 cookbook_file '/opt/tomcat_8/conf/server.xml' do
