@@ -1,9 +1,9 @@
-default['opensirf_register']['conf']['identity'] = 'sirf:sirfadmin'
-default['opensirf_register']['conf']['credential'] = '100years'
-default['opensirf_register']['conf']['provider'] = 'openstack-swift'
-default['opensirf_register']['conf']['region'] = 'RegionOne'
-default['opensirf_register']['conf']['containerName'] = 'philContainer'
-default['opensirf_register']['conf']['driver'] = 'swift'
-default['opensirf_register']['conf']['endpoint'] = 'http://200.144.189.109:55000/v2.0/'
-default['opensirf_register']['conf']['distributionPolicy'] = 'serial'
-default['opensirf_register']['conf']['server'] = 'http://200.144.189.109:8088'
+default['swift']['default_pwd'] = '100years'
+default['swift']['default_user'] = 'sirfadmin'
+default['swift']['ident_url'] = 'http://devsirfswift:5000/v3'
+default['swift']['project'] = 'sirf'
+
+default['artifactRepo'] = 'http://200.144.189.109:58082/artifactory'
+default['storageMonitorUri'] = 'org.opensirf/opensirf-storage-monitor/1.0.0/wars/opensirf-storage-monitor.war'
+default['storageMonitorUrl'] = "#{node['artifactRepo']}/#{node['storageMonitorUri']}"
+
