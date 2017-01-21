@@ -7,3 +7,4 @@ default['artifactRepo'] = 'http://200.144.189.109:58082/artifactory'
 default['storageMonitorUri'] = 'org.opensirf/opensirf-storage-monitor/1.0.0/wars/opensirf-storage-monitor.war'
 default['storageMonitorUrl'] = "#{node['artifactRepo']}/#{node['storageMonitorUri']}"
 
+default['lv_size'] = '500m'
