@@ -32,7 +32,3 @@ end
 execute 'swift_start' do
   command '/bin/swift-init start all'
 end
-
-execute 'swift_stat_test' do
-  command "swift stat -V 3 --os-username #{node['swift']['default_user']} --os-password #{node['swift']['default_pwd']} --os-auth-url #{node['swift']['ident_url']} --os-project-name #{node['swift']['project']}"
-end
