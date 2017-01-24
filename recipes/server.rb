@@ -18,3 +18,4 @@ tomcat_service '8' do
   action :start
 end
 
+include_recipe 'nfs::client4'
