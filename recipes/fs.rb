@@ -17,6 +17,7 @@ end
 
 bash 'create_lvm_partition' do
   user 'root'
+  returns [0,1]
   code <<-EOH
     echo "d
 n
@@ -42,6 +43,11 @@ lvm_volume_group 'sirfvg' do
         size '500m'
         filesystem 'ext3'
         mount_point "/var/lib/sirf/storage/#{lv}"
+      end
+      nfs_export "/var/lib/sirf/storage/#{lv}" do
+        network 'devsirfserver'
+        writeable true
+        options ['no_root_squash']
       end
    end
 end
