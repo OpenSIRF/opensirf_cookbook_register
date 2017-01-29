@@ -60,6 +60,13 @@ remote_file '/opt/tomcat_8/webapps/opensirf-storage-monitor.war' do
   source node['storage_monitor_url']
 end
 
+cookbook_file '/opt/tomcat_8/conf/server.xml' do
+  source 'server_8088.xml'
+  owner 'root'
+  group 'root'
+  mode '0644'
+end
+
 tomcat_service '8' do
   action :start
 end
