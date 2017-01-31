@@ -10,3 +10,5 @@ default['storage_monitor_url'] = "#{node['artifact_repo']}/#{node['storage_monit
 default['server_war_url'] = "#{node['artifact_repo']}/#{node['server_war_uri']}"
 
 default['lv_size'] = '500m'
+
+default['gitrepo'] = 'https://github.com/OpenSIRF'
